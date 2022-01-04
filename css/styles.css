@@ -28,18 +28,6 @@ body {
     font-size: 20px;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto 100px;
-    grid-template-columns: 1fr 6fr 1fr;
-}
-
-.header {
-    grid-row: 1;
-    grid-column: 1 / 4;
-}
-
 #navbar-container {
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -113,21 +101,55 @@ body {
 }
 
 .underline-magical:hover {
-    background-size: 100% 88%;
+    background-size: 100% 40%;
+}
+
+#header-image {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    /* margin-top: 120px; */
+    background: url(/images/varna/varna_city_view_orig.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#banner-text-container{
+    font-family: Montserrat;
+    color: white;
+    margin: auto;
+    border: 10px solid #dfce0d;
+    height: fit-content;
+    padding: 30px 60px 30px 60px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.banner-text-small{
+    font-size: 40px;
+}
+
+.banner-text-large{
+    font-size: 80px;
+}
+
+.banner-text-yellow{
+    color: #dfce0d;
 }
 
 .page-body {
-    background: blue;
-    grid-row: 2;
-    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
 }
 
 .listing-conatiner {
-    background: gray;
     display: flex;
     flex-direction: row;
     align-items: stretch;
     gap: 10% 10%;
+    margin: 20px 10% 20px 10%;
 }
 
 .listing-container-left {
@@ -135,8 +157,7 @@ body {
 }
 
 .listing-container-right {
-    flex-grow: 1;
-    padding-top: 10%;
+   
 }
 
 .footer {
