@@ -9,7 +9,6 @@
 * {
     margin: 0px;
     padding: 0px;
-    min-width: 0px;
     box-sizing: border-box;
 }
 
@@ -28,7 +27,12 @@ body {
     font-size: 20px;
 }
 
+ul {
+    list-style-type: none;
+}
+
 #navbar-container {
+    z-index: 1;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 20px;
@@ -108,7 +112,6 @@ body {
     display: flex;
     height: 100vh;
     width: 100%;
-    /* margin-top: 120px; */
     background: url(/images/varna/varna_city_view_orig.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -146,23 +149,180 @@ body {
 
 .listing-conatiner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
-    gap: 10% 10%;
-    margin: 20px 10% 20px 10%;
+    margin: 40px 10% 0px 10%;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 16px 16px;
+    border-top: 3px solid #dfce0d;
 }
 
-.listing-container-left {
-
+.listing-container-information {
+    display: flex;
+    flex-direction: row;
 }
 
-.listing-container-right {
-   
+@media only screen and (max-width: 1200px) {    
+    .listing-conatiner {
+        margin: 20px 2% 0px 2%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .listing-container-details {
+        margin-top: 40px;
+    }
+
+    .listing-container-information {
+        flex-direction: column;
+    }    
 }
+
+.listing-container-button {
+    margin-top: 40px;
+}
+
+.listing-container-details {
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.listing-details-wrapper {
+    flex: 1;
+}
+
+.listing-container-image {
+    display: flex;
+    flex: 1;
+}
+
+.listing-image {
+    width: 100%;
+    margin: auto;
+}
+
+h2 {
+    font-family: Montserrat;
+    font-size: 40px;
+}
+
+h3 {
+    font-family: Montserrat;
+    font-size: 25px;
+}
+
+.price {
+    color: #dfce0d;
+    font-family: Montserrat;
+    font-size: 30px;
+}
+
+.amenities-container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.amenities-icon-wrapper {
+    margin: auto 20px 0px 0px;
+    text-align: center;
+    flex: 1;
+}
+
+.amenities-icon-wrapper:hover .icon-pointer {
+    background:#dfce0d;
+}
+
+.icon-description {
+    visibility: hidden;
+    font-size: 18px;
+}
+
+.amenities-icon-wrapper:hover .icon-description {
+    visibility: visible;
+}
+
+.icon-pointer {
+    height: 5px;
+    width: 30%;
+    margin: 0px auto;
+}
+
+.features-list {
+    margin-top: 40px;
+    flex: 2;
+    font-size: 24px;
+}
+
+.feature-item {
+    box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 2px;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid #E5E5E5;
+    border-left: 5px solid #dfce0d;
+    margin-bottom: 20px;
+}
+
+.rotating-button {
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+
+  .rotating-button a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+
+  .rotating-button a:before,
+  .rotating-button a:after{
+    position: absolute;
+    content: "BOOK NOW!";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #dfce0d;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .rotating-button a:before{
+    color: #000;
+    background: #dfce0d;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .rotating-button a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .rotating-button a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
+  .rotating-button-container {
+      text-align: center;
+  }
 
 .footer {
-    background: green;
-    grid-row: 3;
-    grid-column: 1 / 4;
+    background: #000;
+    border-top: 1px solid #E5E5E5;
+    color: #E5E5E5;
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
 }
 
