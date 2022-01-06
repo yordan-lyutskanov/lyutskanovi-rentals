@@ -67,7 +67,7 @@ ul {
     display: inline;
     text-align: center;
     font-size: 24px;
-    margin: auto;
+    margin: auto 30px;
     max-width: 150px;
     flex: 1;
 }
@@ -83,6 +83,7 @@ ul {
     }
 
     #navbar-menu-button {
+        margin: auto;
         visibility: visible;
     }
 

@@ -1,4 +1,4 @@
-let scriptUrls = ["/js/menu-bar.js"];
+let scriptUrls = ["js/menu-bar.js"];
 
 scriptUrls.map(url => {
     console.log(`Adding script: ${url} to the dom.`)
