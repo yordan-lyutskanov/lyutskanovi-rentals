@@ -40,6 +40,7 @@ ul {
     width: 100%;
     top: 0px;
     background: #E5E5E5;
+    transition:top 0.5s linear;
 }
 
 
