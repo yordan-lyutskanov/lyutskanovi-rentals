@@ -329,6 +329,10 @@ h3 {
     transform: translateZ(-25px) rotateX(-90deg);
   }
 
+  .rotating-button.hover-class a{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
   .rotating-button-container {
       text-align: center;
   }
