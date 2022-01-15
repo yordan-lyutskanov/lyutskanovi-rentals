@@ -137,6 +137,7 @@ ul {
     .listing-container{
         flex-direction: column;
         margin: 166px 20px 40px 20px;
+        padding: 10px;
     }
 
     .listing-image {
@@ -146,7 +147,6 @@ ul {
 
 .listing-container-details {
     flex: 1;
-    margin: 0px 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -158,12 +158,6 @@ ul {
 }
 
 @media only screen and (max-width: 1200px) {    
-    .listing-conatiner {
-        margin: 20px 2% 0px 2%;
-        flex-direction: column;
-        text-align: center;
-    }
-
     .listing-container-details {
         margin: 40px 0px 0px 0px;
     }    
@@ -247,15 +241,26 @@ h3 {
 /*
     DATEPICKER
 */
-table {
-    border-spacing: 10px;
+
+
+
+
+@media only screen and (max-width: 1200px) {    
+    table {
+        border-spacing: 3px;
+    }  
 }
 
 .available-dates {
-    margin: 20px;
+    margin: 20px 0px;
     width: 100%;
     border-bottom: 2px solid #dfce0d;
+}
 
+@media only screen and (max-width: 1200px) {    
+    .available-dates {
+        margin: 10px 0px;
+    }    
 }
 
 .dates-controller {
@@ -302,8 +307,13 @@ input[type="date"]{
 
 .calendar-container {
     display: flex;
-    margin: auto 20px;
     min-height: 350px;
+}
+
+@media only screen and (max-width: 1200px) {    
+    .calendar-container {
+        margin: 10px 0px;
+    }    
 }
 
 .from-to-container {
@@ -398,6 +408,12 @@ input[type="date"]{
 
 .single-month h3 {
     margin-left: 10px;
+}
+
+@media only screen and (max-width: 1200px) {    
+    .single-month h3 {
+        margin-left: 0px;
+    }  
 }
 
 .selectable {
