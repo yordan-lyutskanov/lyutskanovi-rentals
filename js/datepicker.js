@@ -328,3 +328,24 @@ document.getElementById("to-date").onchange = (ev) => {
 
   buildDatePicker(newMonth);
 };
+
+document.getElementById("book-now").addEventListener("click", () => redirect());
+
+function redirect(){
+  if(!SELECTION.from.month || !SELECTION.to.month){
+    //Maybe show a message?
+    return;
+  }
+
+  const id = "17209040";
+  const guests = "2";
+  const adults = "2";
+
+  const checkIn = new Date(SELECTION.from.month.year, SELECTION.from.month.monthAsInteger, SELECTION.from.day + 1).toISOString().split("T")[0];
+  const checkOut = new Date(SELECTION.to.month.year, SELECTION.to.month.monthAsInteger, SELECTION.to.day + 1).toISOString().split("T")[0];
+  
+  const url = `https://www.airbnb.com/book/stays/${id}?numberOfGuests=${guests}&numberOfAdults=${adults}
+    &checkin=${checkIn}&checkout=${checkOut}&guestCurrency=EUR&productId=${id}`;
+
+  window.location.href = url;
+}
