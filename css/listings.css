@@ -1,11 +1,3 @@
-/* 
-#000000 - Text
-#14213D - 
-#FCA311 - Accent
-#E5E5E5 - Body / Header / Footer
-#FFFFFF - Body 
-*/
-
 * {
     margin: 0px;
     padding: 0px;
@@ -116,68 +108,40 @@ ul {
     background-size: 100% 40%;
 }
 
-#header-image {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    background: url(../images/varna/varna_city_view_orig.jpg) no-repeat center 0% fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-#banner-text-container{
-    font-family: Montserrat;
-    color: white;
-    margin: auto;
-    border: 10px solid #dfce0d;
-    height: fit-content;
-    padding: 30px 60px 30px 60px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.banner-text-small{
-    font-size: 40px;
-}
-
-.banner-text-large{
-    font-size: 80px;
-}
-
-@media only screen and (max-width: 1200px) {    
-    .banner-text-small{
-        font-size: 20px;
-    }
-    
-    .banner-text-large{
-        font-size: 40px;
-    }
-}
-
-.banner-text-yellow{
-    color: #dfce0d;
-}
-
-.page-body {
+.listing-container {
     display: flex;
     flex-direction: column;
-}
-
-.listing-conatiner {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin: 40px 10% 0px 10%;
+    margin: 166px 40px 40px 40px;
     padding: 40px;
     box-shadow: rgba(0, 0, 0, 0.35) 5px 16px 16px;
     border-top: 3px solid #dfce0d;
+    min-height: 500px;
 }
 
-.listing-container-information {
+.photos-carrosel {
     display: flex;
-    flex-direction: row;
+    flex: 1;
+}
+
+.listing-image {
+    width: 50%;
+    margin: auto;
+}
+
+.listing-information {
+    flex: 1;
+}
+
+
+@media only screen and (max-width: 1200px) {    
+    .listing-container{
+        flex-direction: column;
+        margin: 166px 20px 40px 20px;
+    }
+
+    .listing-image {
+        width: 100%;
+    }
 }
 
 .listing-container-details {
@@ -186,6 +150,11 @@ ul {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+.listing-information {
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 @media only screen and (max-width: 1200px) {    
@@ -197,10 +166,6 @@ ul {
 
     .listing-container-details {
         margin: 40px 0px 0px 0px;
-    }
-
-    .listing-container-information {
-        flex-direction: column;
     }    
 }
 
@@ -215,11 +180,6 @@ ul {
 .listing-container-image {
     display: flex;
     flex: 1;
-}
-
-.listing-image {
-    width: 100%;
-    margin: auto;
 }
 
 h2 {
@@ -284,6 +244,85 @@ h3 {
     margin-bottom: 20px;
 }
 
+/*
+    DATEPICKER
+*/
+table {
+    border-spacing: 10px;
+}
+
+.available-dates {
+    margin: 20px;
+    width: 100%;
+    border-bottom: 2px solid #dfce0d;
+
+}
+
+.dates-controller {
+
+}
+
+.dates-input {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.dates-input-label {
+    font-family: Montserrat;
+    font-size: 25px;
+    min-width: 100px;
+}
+
+.date-input {
+    flex: 1;
+    max-width: 200px;
+    outline: none;
+    margin-left: 20px; 
+}
+
+.date-input:hover {
+    border-bottom: 4px solid #dfce0d; 
+    cursor: pointer;
+}
+
+input[type="date"]{
+    font-size:16px;
+    font-family: Roboto;
+    border: 0px;
+    border-bottom: 2px solid #dfce0d; 
+
+}
+
+@media only screen and (max-width: 1200px) {    
+    .calendar-container {
+        flex-direction: column;
+    }
+       
+}
+
+.calendar-container {
+    display: flex;
+    margin: auto 20px;
+    min-height: 350px;
+}
+
+.from-to-container {
+    margin: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-icon {
+    cursor: pointer;
+}
+
+.rotating-button-container {
+    margin: 20px;
+}
+
 .rotating-button {
     position: relative;
     display: inline-flex;
@@ -291,20 +330,19 @@ h3 {
     height: 55px;
     margin: 0 15px;
     perspective: 1000px;
-  }
+}
 
-  .rotating-button a{
+.rotating-button a{
     font-size: 19px;
     letter-spacing: 1px;
     transform-style: preserve-3d;
     transform: translateZ(-25px);
     transition: transform .25s;
     font-family: 'Montserrat', sans-serif;
-    
-  }
+}
 
-  .rotating-button a:before,
-  .rotating-button a:after{
+.rotating-button a:before,
+.rotating-button a:after{
     position: absolute;
     content: "BOOK NOW!";
     height: 55px;
@@ -315,34 +353,85 @@ h3 {
     border: 5px solid #dfce0d;
     box-sizing: border-box;
     border-radius: 5px;
-  }
-  .rotating-button a:before{
+}
+.rotating-button a:before{
     color: #000;
     background: #dfce0d;
     transform: rotateY(0deg) translateZ(25px);
-  }
-  .rotating-button a:after{
+}
+.rotating-button a:after{
     color: #000;
     transform: rotateX(90deg) translateZ(25px);
-  }
-  .rotating-button a:hover{
+}
+.rotating-button a:hover{
     transform: translateZ(-25px) rotateX(-90deg);
-  }
+}
 
-  .rotating-button.hover-class a{
+.rotating-button.hover-class a{
     transform: translateZ(-25px) rotateX(-90deg);
-  }
+}
 
-  .rotating-button-container {
-      text-align: center;
-  }
-
-.footer {
-    background: #000;
-    border-top: 1px solid #E5E5E5;
-    color: #E5E5E5;
-    margin-top: 40px;
-    padding: 20px;
+.rotating-button-container {
     text-align: center;
+} 
+
+#previous-month {
+    transform: rotate(180deg);
+}
+
+#calendar {
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+.month-container {
+    flex: 1;
+    min-height: 350px;
+}
+
+.single-month {
+    text-align: left;
+    width: fit-content;
+    margin: 0px auto;
+}
+
+.single-month h3 {
+    margin-left: 10px;
+}
+
+.selectable {
+    text-decoration:none; 
+    cursor: pointer;  
+    border-radius: 0;
+    -webkit-transition: border-radius 1s;
+    transition: border-radius 1s;
+}
+
+.disabled {
+    text-decoration:none; 
+    cursor: default;  
+    color:#E5E5E5;
+    background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+}
+
+.selectable:hover {
+    background-color: #dfce0d2c;
+    border-radius: 100px;
+} 
+
+.date {
+    padding: 5px;
+    text-align: center;
+}
+
+.selected {
+    background: #dfce0d;
+    border-radius: 100px;
+}
+
+.light-selected {
+    background-color: #dfce0d2c;
+    border-radius: 100px;
 }
 

@@ -5,16 +5,16 @@ let banner = document.getElementById("header-image")
 
 /* Show dropdown menu on click */
 menuButton.addEventListener("click", ev => {
-    console.log(`max height: ${menu.style.maxHeight}`)
-    if (menu.style.maxHeight !== "0px" && menu.style.maxHeight){
-        menu.style.maxHeight = "0px"
-        menu.style.visibility = "hidden"
-    } else {
-        setTimeout(() => {
-            menu.style.visibility = "visible"
-        }, 200)
-        menu.style.maxHeight = "200px"
-    }     
+  console.log(`max height: ${menu.style.maxHeight}`)
+  if (menu.style.maxHeight !== "0px" && menu.style.maxHeight) {
+    menu.style.maxHeight = "0px"
+    menu.style.visibility = "hidden"
+  } else {
+    setTimeout(() => {
+      menu.style.visibility = "visible"
+    }, 200)
+    menu.style.maxHeight = "200px"
+  }
 })
 
 /* When the user scrolls down, hide the navbar and slightly move the background image up. 
@@ -22,7 +22,7 @@ menuButton.addEventListener("click", ev => {
 */
 var prevScrollpos = window.pageYOffset;
 var position = 0;
-window.onscroll = function() {
+window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     navbarContainer.style.top = "0px";
@@ -35,10 +35,11 @@ window.onscroll = function() {
 
     if (position < 40) {
       position += 1;
+    }
+  }
+  prevScrollpos = currentScrollPos;
+  if (banner != null) {
+    banner.style.backgroundPositionY = `${position}%`;
   }
 }
-  prevScrollpos = currentScrollPos;
-  banner.style.backgroundPositionY = `${position}%`;
-
-} 
 
