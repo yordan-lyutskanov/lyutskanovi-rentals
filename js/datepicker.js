@@ -158,34 +158,40 @@ class Month {
 
     td.innerHTML = day;
 
-    td.addEventListener("click", (el, ev) => this.#select(day, this, td, table));
+    td.addEventListener("click", (el, ev) => this.#select(day, td, table));
 
     return td;
   }
 
-  #select(day, month) {
+  #select(day) {
     //If the day is disabled no need to do anything. 
-    if(month.disabledDays.includes(day)){
+    if(this.disabledDays.includes(day)){
       return;
     }
 
+    // If both are selected, reset and select only first
     if (SELECTION.from.month && SELECTION.to.month) {
-      SELECTION.from = { day, month };
+      console.log(1)
+      SELECTION.from = { day, month : this };
       SELECTION.to = {};
     }else if(!SELECTION.from.month) {
+      console.log(2)
       //If we don't have a from selection, then this is it. 
-      SELECTION.from = { day, month };
-    } else if (month.isAfter(SELECTION.from.month)) {
+      SELECTION.from = { day, month : this };
+    } else if (this.isAfter(SELECTION.from.month)) {
+      console.log(3)
       //If we have a from selection and this is greater than it we select it as to
-      SELECTION.to = { day, month };
-    } else if (month.isBefore(SELECTION.from.month) || 
-      (month.monthAsInteger === SELECTION.from.month.monthAsInteger && day <= SELECTION.from.day)) {
+      SELECTION.to = { day, month : this };
+    } else if (this.monthAsInteger < SELECTION.from.month.monthAsInteger || 
+      (this.monthAsInteger === SELECTION.from.month.monthAsInteger && day <= SELECTION.from.day)) {
+        console.log(4)
       //If this is selected 2nd, but it's less than the first, we set it as first.
-      SELECTION.from = { day, month };
+      SELECTION.from = { day, month : this};
       SELECTION.to = {};
     } else {
       //Else we select it as to date.
-      SELECTION.to = { day, month };
+      console.log(5)
+      SELECTION.to = { day, month : this};
     }
 
     //Here we set the from/to dates of the input-boxes
@@ -314,6 +320,10 @@ document.getElementById("from-date").onchange = (ev) => {
 
   SELECTION.from.day = newDate.getDate();
   SELECTION.from.month = newMonth;
+
+  minimumToDate = newDate.toISOString().split('T')[0];
+  console.log(minimumToDate);  
+  document.getElementById("to-date").setAttribute('min', minimumToDate);
 
   buildDatePicker(newMonth);
 };

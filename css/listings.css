@@ -108,30 +108,18 @@ ul {
     background-size: 100% 40%;
 }
 
+/* 
+BODY
+ */
+
 .listing-container {
     display: flex;
     flex-direction: column;
-    margin: 166px 40px 40px 40px;
-    padding: 40px;
+    margin: 140px 15% 40px 15%;
     box-shadow: rgba(0, 0, 0, 0.35) 5px 16px 16px;
-    border-top: 3px solid #dfce0d;
+    border-top: 6px solid #dfce0d;
     min-height: 500px;
 }
-
-.photos-carrosel {
-    display: flex;
-    flex: 1;
-}
-
-.listing-image {
-    width: 50%;
-    margin: auto;
-}
-
-.listing-information {
-    flex: 1;
-}
-
 
 @media only screen and (max-width: 1200px) {    
     .listing-container{
@@ -145,6 +133,10 @@ ul {
     }
 }
 
+#carousel {
+    z-index: 0;
+}
+
 .listing-container-details {
     flex: 1;
     display: flex;
@@ -153,8 +145,9 @@ ul {
 }
 
 .listing-information {
+    padding: 40px;
+    flex: 1;
     flex-direction: column;
-    margin-top: 20px;
 }
 
 @media only screen and (max-width: 1200px) {    
@@ -168,11 +161,6 @@ ul {
 }
 
 .listing-details-wrapper {
-    flex: 1;
-}
-
-.listing-container-image {
-    display: flex;
     flex: 1;
 }
 
@@ -238,6 +226,10 @@ h3 {
     margin-bottom: 20px;
 }
 
+.description-section {
+    margin-top: 40px;
+}
+
 /*
     DATEPICKER
 */
@@ -254,7 +246,7 @@ table {
 }
 
 .available-dates {
-    margin: 20px 0px;
+    margin: 40px 0px 20px 0px;
     width: 100%;
     border-bottom: 2px solid #dfce0d;
 }
@@ -309,7 +301,7 @@ input[type="date"]{
 
 .calendar-container {
     display: flex;
-    min-height: 350px;
+    min-height: 400px;
 }
 
 @media only screen and (max-width: 1200px) {    
@@ -439,8 +431,14 @@ input[type="date"]{
 } 
 
 .date {
-    padding: 5px;
+    padding: 10px;
     text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {    
+    .date {
+        padding: 5px;
+    }
 }
 
 .selected {
@@ -453,3 +451,8 @@ input[type="date"]{
     border-radius: 100px;
 }
 
+#map {
+    height: 400px;
+    width: 100%;
+    background-color: red;
+}
