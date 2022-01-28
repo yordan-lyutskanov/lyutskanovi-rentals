@@ -20,6 +20,8 @@ a {
 a:hover {
     text-decoration:none; 
     cursor:pointer;  
+    color: #000000;
+    font-weight: bold;
 }
 
 body {
