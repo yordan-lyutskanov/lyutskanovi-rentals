@@ -1,3 +1,2 @@
-FROM nginx
-COPY . /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+FROM httpd
+COPY ./ /usr/local/apache2/htdocs/
