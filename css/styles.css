@@ -24,7 +24,7 @@ a:hover {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     font-size: 20px;
 }
 
@@ -275,7 +275,7 @@ h3 {
 .features-list {
     margin-top: 40px;
     flex: 2;
-    font-size: 24px;
+    font-weight: bold;
 }
 
 .feature-item {

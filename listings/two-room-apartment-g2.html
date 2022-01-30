@@ -43,14 +43,11 @@
         </div>
     </div>
     <div class="listing-container">
-        <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active carousel-indicator" aria-current="true" aria-label="Slide 1"></button>
+                
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -59,13 +56,11 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <img class="carousel-arrow" src="../images/icons/left-yellow.png" />
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <img class="carousel-arrow" src="../images/icons/right-yellow.png" />
             </button>
         </div>
         <div class="listing-information">
@@ -154,64 +149,61 @@
 
                 <h3 class="section-header">Location: </h3>
                 <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=27.9239684343338%2C43.211654609446015%2C27.92733192443848%2C43.21343938210603&amp;layer=mapnik&amp;marker=43.212546024882826%2C27.92565017938614" style="border: 1px solid black"></iframe><br/><small>
-                <h3 class="section-header">Available Dates:</h3>
-                <div class="calendar-container">
-                    <div class="dates-controller">
-                        <div class="dates-input">
-                            <label class="dates-input-label">From: </label>
-                            <input id="from-date" class="date-input" type="date" />
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=27.9239684343338%2C43.211654609446015%2C27.92733192443848%2C43.21343938210603&amp;layer=mapnik&amp;marker=43.212546024882826%2C27.92565017938614"
+                    style="border: 1px solid black"></iframe><br /><small>
+                    <h3 class="section-header">Available Dates:</h3>
+                    <div class="calendar-container">
+                        <div class="dates-controller">
+                            <div class="dates-input">
+                                <label class="dates-input-label">From: </label>
+                                <input id="from-date" class="date-input" type="date" />
+                            </div>
+                            <div class="dates-input">
+                                <label class="dates-input-label">To: </label>
+                                <input id="to-date" class="date-input" type="date" />
+                            </div>
+                            <div class="button-container">
+                                <svg id="previous-month" class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12.068.016l-3.717 3.698 5.263 5.286h-13.614v6h13.614l-5.295 5.317 3.718 3.699 11.963-12.016z" />
+                                </svg>
+                                <svg id="next-month" class="button-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12.068.016l-3.717 3.698 5.263 5.286h-13.614v6h13.614l-5.295 5.317 3.718 3.699 11.963-12.016z" />
+                                </svg>
+                            </div>
+                            <div class="rotating-button-container listing-details-wrapper">
+                                <span id="book-now" class="rotating-button"><a></a></span>
+                            </div>
                         </div>
-                        <div class="dates-input">
-                            <label class="dates-input-label">To: </label>
-                            <input id="to-date" class="date-input" type="date" />
-                        </div>
-                        <div class="button-container">
-                            <svg id="previous-month" class="button-icon" xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24">
-                                <path
-                                    d="M12.068.016l-3.717 3.698 5.263 5.286h-13.614v6h13.614l-5.295 5.317 3.718 3.699 11.963-12.016z" />
-                            </svg>
-                            <svg id="next-month" class="button-icon" xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24">
-                                <path
-                                    d="M12.068.016l-3.717 3.698 5.263 5.286h-13.614v6h13.614l-5.295 5.317 3.718 3.699 11.963-12.016z" />
-                            </svg>
-                        </div>
-                        <div class="rotating-button-container listing-details-wrapper">
-                            <span id="book-now" class="rotating-button"><a></a></span>
-                        </div>
+
+
+                        <div id="calendar"></div>
+
+                    </div>
+                    <h3 class="section-header">Contact Us: </h3>
+                    <div class="contact-container">
+                        <h4 class="contact-type">Email:</h4>
+                        <h4>lyutskanovi-rentals@gmail.com</h4>
                     </div>
 
+                    <p class="description-paragraph">
 
-                    <div id="calendar"></div>
-
-                </div>
-                <h3 class="section-header">Contact Us: </h3>
-                <div class="contact-container">
-                    <h4 class="contact-type">Email:</h4>
-                    <h4>lyutskanovi-rentals@gmail.com</h4>
-                </div>
-
-                <div class="contact-container">
-                    <h4 class="contact-type">Phone:</h4>
-                    <h4>+359 999 999 999</h4>
-                </div>
-
-                <p class="description-paragraph">
-
-                </p>
+                    </p>
             </div>
 
 
         </div>
-        <footer id="footer">
-            <div>Lyutskanovi Rentals</div>
-            <div>© 2021</div>
-        </footer>
+    </div>
+    <footer id="footer">
+        <div>Lyutskanovi Rentals</div>
+        <div>© 2021</div>
+    </footer>
 
-        <script src="../../js/menu-bar.js"></script>
-        <script src="../../js/datepicker.js"></script>
+    <script src="../../js/menu-bar.js"></script>
+    <script src="../../js/datepicker.js"></script>
 </body>
 
 </html>
