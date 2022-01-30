@@ -232,10 +232,13 @@ function buildDatePicker(fistMonth) {
   if(screen.width <= 1200){
     //Single month for screen less than 1200
     datepickerMonths.push(fistMonth);
-  }else{
+  }else if(screen.width <= 1600){
     //Two months for screen less than 1600
     datepickerMonths.push(fistMonth);
     datepickerMonths.push(fistMonth.nextMonth);
+  }else{
+    //Three months at a time on desktop
+    datepickerMonths.push(fistMonth, fistMonth.nextMonth, fistMonth.nextMonth.nextMonth);
   }
 
   drawMonths();
