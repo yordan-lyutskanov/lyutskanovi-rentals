@@ -24,8 +24,10 @@ a:hover {
 }
 
 body {
-    font-family: sans-serif;
-    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(90, 90, 90);
 }
 
 ul {
@@ -275,7 +277,7 @@ h3 {
 .features-list {
     margin-top: 40px;
     flex: 2;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .feature-item {
