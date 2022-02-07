@@ -1,9 +1,9 @@
-/* 
+/*
 #000000 - Text
-#14213D - 
+#14213D -
 #FCA311 - Accent
 #E5E5E5 - Body / Header / Footer
-#FFFFFF - Body 
+#FFFFFF - Body
 */
 
 * {
@@ -18,8 +18,8 @@ a {
 }
 
 a:hover {
-    text-decoration:none; 
-    cursor:pointer;  
+    text-decoration:none;
+    cursor:pointer;
     color: #000000;
 }
 
@@ -42,8 +42,8 @@ ul {
     position: fixed;
     width: 100%;
     top: 0px;
-    background: -webkit-linear-gradient(to left, #f6f6f6, #E5E5E5); 
-    background: linear-gradient(to right, #f6f6f6, #E5E5E5);    
+    background: -webkit-linear-gradient(to left, #f6f6f6, #E5E5E5);
+    background: linear-gradient(to right, #f6f6f6, #E5E5E5);
     transition:top 0.5s linear;
 }
 
@@ -79,10 +79,10 @@ ul {
 
 #navbar-menu-button {
     visibility: hidden;
-    cursor:pointer;  
+    cursor:pointer;
 }
 
-@media only screen and (max-width: 1200px) {    
+@media only screen and (max-width: 1200px) {
     .navbar-logo {
         text-align: center;
     }
@@ -94,7 +94,7 @@ ul {
 
     #navbar-container {
         flex-direction: column;
-    } 
+    }
 
     #navbar-items {
         flex-direction: column;
@@ -124,7 +124,7 @@ ul {
     display: flex;
     height: 100vh;
     width: 100%;
-    background: url(../images/varna/varna_city_view_orig.jpg) no-repeat center 0% fixed; 
+    background: url(../images/varna/varna_city_view_orig.jpg) no-repeat center 0% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -150,11 +150,11 @@ ul {
     font-size: 80px;
 }
 
-@media only screen and (max-width: 1200px) {    
+@media only screen and (max-width: 1200px) {
     .banner-text-small{
         font-size: 20px;
     }
-    
+
     .banner-text-large{
         font-size: 40px;
     }
@@ -192,7 +192,7 @@ ul {
     width: 100%;
 }
 
-@media only screen and (max-width: 1200px) {    
+@media only screen and (max-width: 1200px) {
     .listing-conatiner {
         margin: 20px 2% 0px 2%;
         flex-direction: column;
@@ -205,7 +205,7 @@ ul {
 
     .listing-container-information {
         flex-direction: column;
-    }    
+    }
 }
 
 .listing-container-button {
@@ -275,13 +275,13 @@ h3 {
 }
 
 .features-list {
-    margin-top: 40px;
+    margin-top: 20px;
     flex: 2;
     font-weight: 400;
 }
 
 .feature-item {
-    box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 2px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.4);
     padding: 5px 20px 5px 20px;
     border: 1px solid #E5E5E5;
     border-left: 5px solid #dfce0d;
@@ -304,7 +304,7 @@ h3 {
     transform: translateZ(-25px);
     transition: transform .25s;
     font-family: 'Montserrat', sans-serif;
-    
+
   }
 
   .rotating-button a:before,
@@ -342,8 +342,8 @@ h3 {
   }
 
 #footer {
-    background: -webkit-linear-gradient(to left, #f6f6f6, #E5E5E5); 
-    background: linear-gradient(to right, #f6f6f6, #E5E5E5);    
+    background: -webkit-linear-gradient(to left, #f6f6f6, #E5E5E5);
+    background: linear-gradient(to right, #f6f6f6, #E5E5E5);
     font-family: Montserrat;
     text-align: center;
     padding-top: 20px;
