@@ -347,7 +347,7 @@ function redirect(){
     return;
   }
 
-  const id = "17209040";
+  const id = document.getElementById("datepicker").getAttribute("rental-id");
   const guests = "2";
   const adults = "2";
 
