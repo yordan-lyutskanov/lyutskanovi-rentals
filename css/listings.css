@@ -117,6 +117,49 @@ ul {
 BODY
  */
 
+ #image-container {
+     background: black;
+     width: 100%;
+     position: relative;
+ }
+
+ .image {
+     width: 100%;
+ }
+
+ #image-container:hover {
+    cursor: pointer;
+ }
+
+ #image-container:hover .image{
+    opacity: 0.4;
+ }
+
+ #image-container:hover #gallery-button {
+    visibility: visible;
+}
+
+ #gallery-button-container {
+     position: absolute;
+     z-index: 1;
+     top: 50%;
+    text-align: center;
+    width: 100%;
+    
+}
+
+#gallery-button {
+    font-family: Montserrat;
+    width: fit-content;
+    margin:auto;
+    visibility: hidden;
+    padding: 20px;
+    color: white;
+    font-size: larger;
+}
+
+
+
 .listing-container {
     display: flex;
     flex-direction: column;

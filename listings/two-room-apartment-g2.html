@@ -46,25 +46,13 @@
         </div>
     </div>
     <div class="listing-container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                    class="active carousel-indicator" aria-current="true" aria-label="Slide 1"></button>
-
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../images/listings/two-room-apartment-g2/1.png" class="d-block w-100" alt="...">
+        <div id="image-container">
+            <img src="../images/listings/two-room-apartment-g2/1.jpg" class="image">
+            <div id="gallery-button-container">
+                <div id="gallery-button">
+                    Show all photos
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <img class="carousel-arrow" src="../images/icons/left-yellow.png" />
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <img class="carousel-arrow" src="../images/icons/right-yellow.png" />
-            </button>
         </div>
         <div class="listing-information">
             <div class="listing-container-details">
@@ -207,6 +195,9 @@
 
     <script src="../../js/menu-bar.js"></script>
     <script id="datepicker" rental-id="17209322" src="../../js/datepicker.js"></script>
+    <script>
+        document.getElementById("image-container").onclick = function () { window.location.href = `/listings/two-room-apartment-g2-gallery.html` }
+    </script>
 </body>
 
 </html>
